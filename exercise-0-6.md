@@ -4,7 +4,7 @@ participant browser
 participant server
 
     Note right of browser: The browser adds the user input from the note input to the list of notes.
-    Note right of browser: The browser executes the callback function that renders the notes.
+    Note right of browser: The browser executes the function that renders the notes.
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
 
