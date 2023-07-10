@@ -4,7 +4,7 @@ participant browser
 participant server
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    
+
     Note right of browser: The Payload contains the user input from the note input.
 
     Note left of server: The server adds the new note to the list of notes
