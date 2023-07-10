@@ -3,16 +3,7 @@ sequenceDiagram
 participant browser
 participant server
 
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-
-    Note right of browser: The Payload contains the user input from the note input.
-
-    activate server
-    Note left of server: The server adds the new note to the list of notes
-    server-->>browser: URL redirect /exampleapp/notes
-    deactivate server
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
     server-->>browser: HTML document
     deactivate server
@@ -22,7 +13,7 @@ participant server
     server-->>browser: the css file
     deactivate server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     activate server
     server-->>browser: the JavaScript file
     deactivate server
@@ -35,10 +26,4 @@ participant server
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-
-
-
-
-
-
 ```
